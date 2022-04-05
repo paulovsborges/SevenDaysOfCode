@@ -1,5 +1,6 @@
 package com.pvsb.sevendaysofcode.framework.data.di
 
+import com.pvsb.sevendaysofcode.BuildConfig
 import com.pvsb.sevendaysofcode.framework.data.service.IMDBService
 import dagger.Module
 import dagger.Provides
@@ -21,7 +22,7 @@ object NetworkModule {
 
         val originalReq = it.request()
         val url = originalReq.url.newBuilder()
-            .addQueryParameter("apiKey", "k_3qxfv21y")
+            .addQueryParameter("apiKey", BuildConfig.API_KEY)
             .build()
 
         val request = originalReq.newBuilder()
@@ -53,7 +54,7 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://imdb-api.com/en/API/")
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
