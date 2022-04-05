@@ -5,5 +5,5 @@ import com.pvsb.core.model.IMDBDetails
 
 interface IMDBRepository {
 
-    suspend fun fetchData(): PagingSource<Int, IMDBDetails>
+    fun fetchData(): PagingSource<Int, IMDBDetails>
 }

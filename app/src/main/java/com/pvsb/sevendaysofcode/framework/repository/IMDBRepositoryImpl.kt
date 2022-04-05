@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class IMDBRepositoryImpl @Inject constructor(private val remote : RemoteDataSource) : IMDBRepository{
 
-    override suspend fun fetchData(): PagingSource<Int, IMDBDetails> {
+    override fun fetchData(): PagingSource<Int, IMDBDetails> {
         return IMDBPagingData(remote)
     }
 }
