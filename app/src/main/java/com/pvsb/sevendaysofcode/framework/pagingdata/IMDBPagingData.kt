@@ -17,7 +17,7 @@ class IMDBPagingData @Inject constructor(
 
             LoadResult.Page(
                 response.items,
-                null, null
+                null, 1
             )
         } catch (e: Exception) {
             LoadResult.Error(e)

@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface IMDBService {
 
-    @GET
+    @GET("Top250Movies/")
     suspend fun fetchData(): IMDBResponse
 }

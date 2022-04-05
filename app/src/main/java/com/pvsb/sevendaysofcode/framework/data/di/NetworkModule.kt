@@ -53,7 +53,7 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://imdb-api.com/en/API/Top250Movies/")
+            .baseUrl("https://imdb-api.com/en/API/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
