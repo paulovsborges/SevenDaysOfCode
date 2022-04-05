@@ -25,9 +25,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rvMain.adapter = mAdapter
-
+        initialSetUp()
         fetchInitialData()
+    }
+
+    private fun initialSetUp() {
+
+        binding.apply {
+            rvMain.adapter = mAdapter
+            rvMain.setHasFixedSize(true)
+        }
     }
 
     private fun fetchInitialData() {

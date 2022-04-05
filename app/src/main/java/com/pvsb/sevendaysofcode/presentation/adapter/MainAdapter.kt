@@ -7,6 +7,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.pvsb.core.model.IMDBDetails
 import com.pvsb.sevendaysofcode.databinding.MainListItemBinding
 
@@ -23,7 +25,7 @@ class MainAdapter : PagingDataAdapter<IMDBDetails, MainAdapter.MainViewHolder>(B
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        getItem(position)?.let{
+        getItem(position)?.let {
             holder.bind(it)
         }
     }
@@ -33,7 +35,15 @@ class MainAdapter : PagingDataAdapter<IMDBDetails, MainAdapter.MainViewHolder>(B
 
         fun bind(item: IMDBDetails) {
 
+            val rating = "${item.imDbRating} - Ano:${item.year}"
+
             binding.tvTitle.text = item.title
+            binding.tvRating.text = rating
+
+            Glide.with(itemView.context)
+                .load(item.image)
+                .transition(DrawableTransitionOptions.withCrossFade(700))
+                .into(binding.ivMain)
         }
     }
 }

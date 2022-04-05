@@ -2,21 +2,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/black"
-    android:layout_margin="2dp">
+    android:layout_width="190dp"
+    android:layout_height="300dp"
+    android:layout_margin="2dp"
+    android:background="#3A3A3A">
 
     <TextView
         android:id="@+id/tvTitle"
-        android:textSize="20sp"
-        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ivMain"
+        app:layout_constraintStart_toStartOf="@id/ivMain"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="God Father" />
+
+    <ImageView
+        android:id="@+id/ivMain"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1231" />
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        tools:text="8.0 - Ano :1974"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ivMain"
+        app:layout_constraintTop_toBottomOf="@id/ivMain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
