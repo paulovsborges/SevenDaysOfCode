@@ -1,4 +1,4 @@
-package com.pvsb.sevendaysofcode.framework.pagingdata
+package com.pvsb.sevendaysofcode.domain.pagingdata
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

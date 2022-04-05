@@ -6,7 +6,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.pvsb.core.model.IMDBDetails
-import com.pvsb.sevendaysofcode.domain.PagingDataUseCase
+import com.pvsb.sevendaysofcode.domain.pagingdata.PagingDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

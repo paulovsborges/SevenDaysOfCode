@@ -2,8 +2,8 @@ package com.pvsb.sevendaysofcode.framework.data.di
 
 import com.pvsb.sevendaysofcode.framework.data.datasource.RemoteDataSource
 import com.pvsb.sevendaysofcode.framework.data.datasource.RemoteDataSourceImpl
-import com.pvsb.sevendaysofcode.framework.repository.IMDBRepository
-import com.pvsb.sevendaysofcode.framework.repository.IMDBRepositoryImpl
+import com.pvsb.sevendaysofcode.domain.repository.IMDBRepository
+import com.pvsb.sevendaysofcode.domain.repository.IMDBRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
